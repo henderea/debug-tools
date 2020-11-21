@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  width:    100%;
+  height:   100%;
+  margin:   0;
+  padding:  0;
+  position: relative;
+  overflow: hidden;
+}
+
+.extra-info {
+  padding:       1em;
+  margin:        0.5em;
+  border:        1px solid #000;
+  border-radius: 1em;
+  display:       inline-block;
+  font-family:   'Lato', sans-serif;
+  font-size:     18px;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.extra-info-container {
+  text-align: center;
+}
