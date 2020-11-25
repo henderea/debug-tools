@@ -12,12 +12,10 @@ if(process.env.NODE_ENV === 'production') {
 window.addEventListener('load', () => {
   let model = new Model();
   ko.applyBindings(model);
-  let updateSizingInfo = () => {
+  let updateSizingInfo = () => setTimeout(() => {
     model.windowWidth = window.innerWidth;
     model.windowHeight = window.innerHeight;
-  };
+  }, 20);
   window.addEventListener('resize', updateSizingInfo);
-  window.setTimeout(() => {
-    updateSizingInfo();
-  }, 50);
+  updateSizingInfo();
 });
