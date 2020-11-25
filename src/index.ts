@@ -15,7 +15,9 @@ window.addEventListener('load', () => {
   let updateSizingInfo = () => setTimeout(() => {
     model.windowWidth = window.innerWidth;
     model.windowHeight = window.innerHeight;
-  }, 20);
+  }, 10);
   window.addEventListener('resize', updateSizingInfo);
   updateSizingInfo();
+  model.windowWidth = window.innerWidth;
+  model.windowHeight = window.innerHeight;
 });
