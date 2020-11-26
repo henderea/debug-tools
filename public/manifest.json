@@ -1,7 +1,7 @@
 {
   "name": "Debug Tools",
   "short_name": "Debug Tools",
-  "theme_color": "#000",
+  "theme_color": "#fff",
   "background_color": "#fff",
   "display": "standalone",
   "Scope": "/",
