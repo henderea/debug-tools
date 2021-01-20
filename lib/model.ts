@@ -1,7 +1,7 @@
 // @ts-ignore
 import { ko, obs, obsArr, comp } from 'lib/knockout-util.ts';
 
-const deploymentId = process.env.VERCEL_URL ? process.env.VERCEL_URL.replace(/^.*?-([a-zA-Z0-9]+)(-[^-]+)?\.vercel\.app.*$/, '$1') : 'N/A';
+const deploymentId = process.env.VERCEL_URL ? process.env.VERCEL_URL.replace(/^.*-([a-zA-Z0-9]+)(-[^-]+)?\.vercel\.app.*$/, '$1') : 'N/A';
 
 class Model {
   private readonly _windowWidth: ko.Observable<number> = obs(-1);
