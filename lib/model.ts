@@ -1,7 +1,7 @@
 // @ts-ignore
 import { ko, obs, obsArr, comp } from 'lib/knockout-util.ts';
 
-const deploymentId = process.env.VERCEL_URL ? process.env.VERCEL_URL.replace(/^.*?-([a-zA-Z0-9]+)\.vercel\.app.*$/, '$1') : 'N/A';
+const deploymentId = process.env.VERCEL_URL ? process.env.VERCEL_URL.replace(/^.*?-([a-zA-Z0-9]+)(-[^-]+)?\.vercel\.app.*$/, '$1') : 'N/A';
 
 class Model {
   private readonly _windowWidth: ko.Observable<number> = obs(-1);
@@ -14,7 +14,7 @@ class Model {
       const standaloneDisplay: string = standalone === true ? 'true' : standalone === false ? 'false' : standalone === undefined ? 'undefined' : `'${standalone}' (${typeof standalone})`;
       let windowWidth: number = self.windowWidth;
       let windowHeight: number = self.windowHeight;
-      return `<b>Standalone:</b> ${standaloneDisplay}<br><b>Deployment ID:</b> ${deploymentId}<br><b>Window:</b> ${windowWidth < 0 ? '?' : windowWidth}x${windowHeight < 0 ? '?' : windowHeight}px`;
+      return `<b>Standalone:</b> ${standaloneDisplay}<br><b>Deployment ID:</b> ${deploymentId} ('${process.env.VERCEL_URL}')<br><b>Window:</b> ${windowWidth < 0 ? '?' : windowWidth}x${windowHeight < 0 ? '?' : windowHeight}px`;
     });
   }
 
