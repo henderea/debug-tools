@@ -18,14 +18,14 @@
   "license": "ISC",
   "repository": "git@github.com:henderea/debug-tools.git",
   "devDependencies": {
-    "@henderea/static-site-builder": "^1.9.4",
+    "@henderea/static-site-builder": "^1.9.6",
     "@types/knockout": "^3.4.69",
     "@types/lodash": "^4.14.168",
-    "browser-sync": "^2.26.13",
+    "browser-sync": "^2.26.14",
     "concurrently": "^5.3.0",
-    "eslint": "^7.18.0",
+    "eslint": "^7.19.0",
     "serve": "^11.3.2",
-    "vercel": "^21.1.0"
+    "vercel": "^21.2.3"
   },
   "dependencies": {
     "knockout": "^3.5.1",
